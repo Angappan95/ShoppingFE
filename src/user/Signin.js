@@ -7,8 +7,8 @@ import { signin, authenticate, getUserToken } from '../auth/helper';
 const Signin = () => {
 
     const [value, setValue] = useState({
-        email: "",
-        password: "",
+        email: "test421@gmail.com",
+        password: "123",
         error: "",
         success: false,
         didRedirect: false,
