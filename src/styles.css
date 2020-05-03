@@ -14,3 +14,7 @@ footer {
   left: 0px;
   right: 0px
 }
+
+button {
+  border-radius: 10px;
+}

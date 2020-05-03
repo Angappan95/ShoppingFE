@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import Base from '../core/Base';
 import { signin, authenticate, getUserToken } from '../auth/helper';
+import { Redirect } from 'react-router-dom';
 
 
 const Signin = () => {
@@ -44,17 +44,9 @@ const Signin = () => {
     const perfomRedirect = () => {
         if (didRedirect) {
             if (user && user.role === 1) {
-                return (<div className="row">
-                    <div className="col-md-6 offset-sm-3 text-center">
-                        <div className="alert alert-info">Redirecting to Admin Dashboard</div>
-                    </div>
-                </div>)
+                return <Redirect to="/admin/dashboard"/>
             } else {
-                return (<div className="row">
-                    <div className="col-md-6 offset-sm-3 text-center">
-                        <div className="alert alert-info">Redirecting to User Dashboard</div>
-                    </div>
-                </div>)
+                return <Redirect to="/user/dashboard"/>
             }
         }
     }
