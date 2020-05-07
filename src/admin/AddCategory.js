@@ -7,7 +7,7 @@ import { createCategory } from './helper/adminapicall';
 
 const AddCategory = () => {
 
-    const [name, setName] = useState("Category 112")
+    const [name, setName] = useState("")
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState(false)
     const { user, token } = getUserToken()
