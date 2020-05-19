@@ -16,13 +16,13 @@ const AdminDashBoard = () => {
                         <Link to="/admin/add/category" className="nav-link text-success">Add Category</Link>
                     </li>
                     <li className="list-group-item">
-                        <Link to="admin/category" className="nav-link text-success">Modify Category</Link>
+                        <Link to="/admin/categories" className="nav-link text-success">Manage Category</Link>
                     </li>
                     <li className="list-group-item">
-                        <Link to="/admin/add/product" className="nav-link text-success">Add Products</Link>
+                        <Link to="/admin/add/product" className="nav-link text-success">Add Product</Link>
                     </li>
                     <li className="list-group-item">
-                        <Link to="/admin/product/" className="nav-link text-success">Modify Products</Link>
+                        <Link to="/admin/products/" className="nav-link text-success">Modify Products</Link>
                     </li>
                     <li className="list-group-item">
                         <Link to="/admin/orders" className="nav-link text-success">Manage Orders</Link>
@@ -38,8 +38,8 @@ const AdminDashBoard = () => {
     //     </li>)
     // );
 
-    const getValues = values => values.map(value => (
-        <li className="list-group-item">
+    const getValues = values => values.map((value, index) => (
+        <li key={value} className="list-group-item">
             <span className="badge badge-info">{value}</span>
         </li>)
     );

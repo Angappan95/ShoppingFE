@@ -20,16 +20,37 @@ export const createCategory = (userId, token, category) => {
         });
 }
 
+export const getCategory = (categoryId) => {
+    return fetch(`${API}/category/${categoryId}`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        }
+    }).then(response => response.json())
+    .catch(error => console.log(error))
+}
+
+export const getAllCategories = () => {
+    return fetch(`${API}/categories/all`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        }
+    }).then(response => response.json())
+    .catch(error => console.log(error))
+}
 
 // NOTE: Helpers for Products section
 
 // 1. Create a Product
 export const createProduct = (userId, token, product) => {
+    console.log(product)
     return fetch(`${API}/product/create/${userId}`, {
         method: "POST",
         headers: {
             Accept: "application/json",
-            "Content-Type": "application/json",
             Authorization: `Bearer ${token}`
         },
         body: product
@@ -46,7 +67,7 @@ export const getProduct = productId => {
 }
 
 // 3. Get All Products
-export const getAllProduct = () => {
+export const getAllProducts = () => {
     return fetch(`${API}/products/all`, {
         method: "GET"
     }).then(response => response.json())

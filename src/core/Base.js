@@ -21,9 +21,9 @@ const Base = ({
                 <div className={class_}>{children}</div>
             </div>
             <footer className="footer bg-success text-white mt-auto py-3">
-                <div className="text-warning text-center font-weight-bold font-italic" style={{fontSize: 20}}>Copyrights are reserved to An inc.,</div>
+                <div className="text-warning text-center font-weight-bold font-italic">Copyrights are reserved to An inc.,</div>
                 <div className="text-center">
-                    <button className="btn btn-primary btn-lg" style={{borderRadius: 10}}>Contact Us</button>
+                    <button className="btn btn-primary btn-md rounded">Contact Us</button>
                 </div>
             </footer>
         </div>
