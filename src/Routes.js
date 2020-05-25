@@ -12,6 +12,8 @@ import AddCategory from './admin/AddCategory';
 import ManageCategories from './admin/ManageCategory';
 import AddProduct from './admin/AddProduct';
 import ManageProduct from './admin/ManageProducts';
+import UpdateProduct from './admin/UpdateProduct';
+import UpdateCategory from './admin/UpdateCategory';
 
 
 const Routes = () => {
@@ -28,6 +30,8 @@ const Routes = () => {
                 <AdminRoute path="/admin/categories" component={ManageCategories} />
                 <AdminRoute path="/admin/add/product" component={AddProduct} />
                 <AdminRoute path='/admin/products' component={ManageProduct} />
+                <AdminRoute path='/admin/product/update/:productId' component={UpdateProduct} />
+                <AdminRoute path="/admin/category/update/:categoryId" component={UpdateCategory} />
             </Switch>
         </BrowserRouter>
     );

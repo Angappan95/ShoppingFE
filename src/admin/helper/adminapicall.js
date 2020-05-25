@@ -42,6 +42,30 @@ export const getAllCategories = () => {
     .catch(error => console.log(error))
 }
 
+export const updateCategory = (userId, token, categoryId, category) => {
+    return fetch(`${API}/category/${categoryId}/${userId}`, {
+        method: "PUT",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`
+        },
+        body: category
+    })
+}
+
+export const deleteCategory = (categoryId, userId, token) => {
+    return fetch(`${API}/category/${categoryId}/${userId}`, {
+        method: "DELETE",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`
+        }
+    }).then(response => response.json())
+    .catch(error => console.log(error))
+}
+
 // NOTE: Helpers for Products section
 
 // 1. Create a Product
